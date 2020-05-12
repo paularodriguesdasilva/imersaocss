@@ -1,0 +1,40 @@
+body {
+    /* background-color: #0000FF; */
+    background-image: url('../img/fundo4.jpg');
+    background-size: auto 100vh;
+    font-family: cursive;
+    height: 100vh;
+}
+
+.menu {
+    background-color: #4169E1;
+    
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+.site-subtitle,
+.site-title {
+    color: #B8860B;
+    text-align: center;
+}
+
+.site-subtitle {
+    font-style: italic;
+}
