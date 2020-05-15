@@ -8,7 +8,7 @@
 body {
     background-image: url('../img/fundo4.jpg');
     background-size: auto 100vh;
-    font-family: cursive;
+    font-family: 'Comfortaa', cursive;
     height: 100vh;
     font-size: 10px;
 }
@@ -58,6 +58,7 @@ header {
 
 .menu a {
     display: block;
+    
     padding: 10px 20px;
 }
 
@@ -78,12 +79,51 @@ a:hover {
 
 .site-title {
     font-size: 4em;
+    font-family: 'Sacramento', cursive;
 }
 .site-subtitle {
     font-style: italic;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 1.8em;
+}
+.portfolio {
+    padding: 2em;
+    height: 100vh;
+}
+
+.portfolio h2 {
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 240px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 4em - 40px - 1.5em);
+    }
+}
+
+.portfolio figure {
+    text-align: center;
 }
 
 .img-portfolio {
     height: 180px;
     width: 180px;
+    object-fit: cover;
+    border-radius: 80%;
 }
