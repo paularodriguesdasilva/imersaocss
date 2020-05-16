@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('../img/fundo4.jpg');
+    background-image: url('../img/fundo2.jpg');
     background-size: auto 100vh;
     font-family: 'Comfortaa', cursive;
     height: 100vh;
@@ -30,6 +30,10 @@ body {
     body {
         font-size: 20px;
     }
+    .portfolio h2 {
+            font-family: 'Comfortaa', cursive;
+            font-size: 2em;
+    }
 }
 
 header {
@@ -44,7 +48,7 @@ header {
     position: fixed;
     width: 100vw;
     top: 0;
-    
+    z-index: 1;
 }
 
 .menu ul {
@@ -58,8 +62,14 @@ header {
 
 .menu a {
     display: block;
-    
     padding: 10px 20px;
+    transition: background-color 2s, color 2s;
+}
+
+.menu a:active,
+.menu a:hover {
+    background-color: #FFD700;
+    color: #4169E1;
 }
 
 a {
@@ -69,6 +79,22 @@ a {
 
 a:hover {
     text-decoration: line-through;
+}
+
+.titulo {
+    /* transform: scale(0.2) translateY(50vh); */
+    opacity: 0;
+
+    animation: linear 1s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    from {
+       opacity: 0;
+    }
+    to {
+       opacity: 1;
+    }
 }
 
 .site-subtitle,
@@ -86,15 +112,21 @@ a:hover {
     font-family: 'Source Code Pro', monospace;
     line-height: 1.8em;
 }
+
+.contato,
 .portfolio {
-    padding: 2em;
-    height: 100vh;
+    padding: 1em;
+    min-height: 100vh;
 }
 
+.contato h2,
 .portfolio h2 {
+    color: #B8860B;
     font-family: 'Comfortaa', cursive;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
     font-size: 2em;
+    
 }
 
 .portfolio .grid {
@@ -122,8 +154,28 @@ a:hover {
 }
 
 .img-portfolio {
+
     height: 180px;
     width: 180px;
-    object-fit: cover;
-    border-radius: 80%;
+    object-fit:contain;
+    transition: 500ms;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.2);
+}
+
+.contato .icons {
+    text-align: center;
+}
+.contato a {
+    color: #4169E1;
+    font-size: 5em;
+    transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 15px rgba(65,105,225,1);
 }
